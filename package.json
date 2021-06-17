@@ -1,0 +1,23 @@
+{
+  "name": "pasjansdocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PasjansProjektIO/PasjansDOCS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PasjansProjektIO/PasjansDOCS/issues"
+  },
+  "homepage": "https://github.com/PasjansProjektIO/PasjansDOCS#readme"
+}
