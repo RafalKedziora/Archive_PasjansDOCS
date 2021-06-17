@@ -11,9 +11,8 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
-    "heroku-postbuild": "npm install && npm i docsify-cli -g",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docsify serve docs"
+    "start": "npm install && npm i docsify-cli -g && docsify serve docs "
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-      "marked": "^1.2.9",
+    "marked": "^1.2.9",
     "medium-zoom": "^1.0.6",
     "opencollective-postinstall": "^2.0.2",
     "prismjs": "^1.23.0",
