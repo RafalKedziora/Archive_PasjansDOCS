@@ -24,6 +24,7 @@
 - - [Main Menu](mainmenu.md)
 - - [Register](register.md)
 - - [Multiplayer](multiplayer.md)
+- - [GlobalStats](GlobalStats.md)
 
 - data_objects
 
