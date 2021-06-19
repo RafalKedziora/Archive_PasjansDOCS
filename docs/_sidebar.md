@@ -4,6 +4,7 @@
 - [Opis](opis.md "Opis gry Klondike")
 - [Instrukcja obsługi aplikacji](instrukcjaklient.md)
 - [Instrukcja obsługi dla użytkownika](instrukcjauzytkownika.md)
+- [Konfiguracja bazy danych](mysql.md)
 
 - public
 
@@ -13,6 +14,8 @@
 
 - - [agent.js](agent.md)
 - - [Soundtrack](soundtrack.md)
+- - [utils](utilsclient.md)
+- - [App.js](clientapp.md)
 
 - src/components
 - - [authors](authors.md)
@@ -32,3 +35,5 @@
 - database
 - - [database](database.md)
 - utils
+- - [users.js](utils.md)
+- [index.js](serverindex.md)
