@@ -25,6 +25,7 @@
 - - [Register](register.md)
 - - [Multiplayer](multiplayer.md)
 - - [GlobalStats](GlobalStats.md)
+- - [Logic](Logic.md)
 
 - data_objects
 
@@ -33,6 +34,7 @@
 - SERVER
 
 - api
+- - [api](api.md)
 - config
 - - [dbconfig.js](dbconfig.md)
 - database
