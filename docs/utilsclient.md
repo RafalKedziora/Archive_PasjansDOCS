@@ -34,8 +34,6 @@ if (dropTarget.color !== selectedCard.color) {
 
 `isMovable` zwraca wartość `boolean`, która informuje o tym czy karta może być przesunięta.
 
-O co chodzi w pętli?
-
 `check4Stack` to funkcja sprawdzająca czy na czterech polach u góry planszy można położyć kartę.
 Przypadek w którym nic nie leży na polu:
 
@@ -58,12 +56,9 @@ if (
 }
 ```
 
-const cards?
-const testCards ?
-const testCard2 ?
+`const cards` to wszystkie dostępne karty w talii. `const testCards` oraz `const testCard2` są specjalnie ułożonymi taliami, które nie wymagają tasowania;służą do testowania.
 
-`shuffleCards` tasuje karty.
-W pętli losowo wybierana jest karta i wrzucana na stos, po czym jest wyrzucana z talii, aby nie została wylosowana ponownie.
+`shuffleCards` tasuje karty. W pętli losowo wybierana jest karta i wrzucana na stos, po czym jest wyrzucana z talii, aby nie została wylosowana ponownie.
 
 ```js
 for (let i = 0; i < 24; i++) {
@@ -73,22 +68,6 @@ for (let i = 0; i < 24; i++) {
   startColumn1.push(card);
   deck.splice(random, 1);
 }
-```
-
-Co robi ten fragment?
-
-```js
-Object.entries(mainColumns).map(([key, item], index) => {
-  for (let j = 0; j < index + 1; j++) {
-    const random = Math.floor(Math.random() * deck.length);
-    const card = { ...deck[random] };
-    if (j === index) {
-      card.isVisible = true;
-    } else card.isVisible = false;
-    item.push(card);
-    deck.splice(random, 1);
-  }
-});
 ```
 
 `numMoves` na podstawie ustawienia kart zwraca ilość możliwych ruchów. Zagnieżdżone pętle w tej funkcji na podstawie `isDroppable` obliczają ilość możliwych ruchów do wykonania przechodząc przez wszystkie kolumny oraz '4stack'.
@@ -122,7 +101,7 @@ currentCards,
 
 Zwiększa ilość wykonanych ruchów `letMoveNumbers((prev) => prev + 1);`
 
-Oblicza punkty w zależności od warunku
+Oblicza punkty w zależności od warunków. W tym przypadku, w momencie przenoszenia karty z jednej z 4 miejsc na górze, odejmuje 10 punktów.
 
 ```js
 if (draggingCards.title.includes("finalColumn")) {
@@ -131,4 +110,64 @@ if (draggingCards.title.includes("finalColumn")) {
       else setPoints(newPoints);
 ```
 
-OD 430 linijki
+` if (draggingCards.title === "startColumn2")` oznacza, że karta jest pobrana z talii, więc przerzucana jest do odpowiedniej, nowej kolumny, a w talii pobierana jest nowa.
+
+```js
+const source = columns["startColumn1"].get;
+      const index = draggingCard.cardIndex;
+      source.splice(index - 1, 1);
+      columns[draggingCard.title].set([]);
+      columns["startColumn1"].set(source);
+      columns[currentCards.title].set([
+        ...currentCards.array,
+        ...draggingCards.array,
+```
+
+Ostatnie prawidłowe przenoszenie to z kolumny do kolumny. Po dodaniu do nowej kolumny,
+
+```js
+
+      columns[currentCards.title].set([
+        ...currentCards.array,
+        ...draggingCards.array,
+```
+
+"Obcinany" jest z tablicy fragment kolumny,
+
+```js
+const reducedColumn = carriedArray.slice(0, sliceEnd);
+```
+
+Sprawdzane jest czy pod spodem nie ma odwróconych kart, a jeśli są to stają się widoczne.
+
+```js
+if (
+  reducedColumn.length > 0 &&
+  !reducedColumn[reducedColumn.length - 1].isVisible
+) {
+  reversed = reducedColumn.length - 1;
+}
+if (reducedColumn.length > 0)
+  reducedColumn[reducedColumn.length - 1].isVisible = true;
+```
+
+Przy każdym prawidłowym odłożeniu karty zapisywany jest krok w `newHistoryStep`, aby mogło funkcjonować cofanie ruchu oraz działała analiza rozgrywki, po ukończeniu gry.
+
+```js
+newHistoryStep = {
+  source: draggingCard.title,
+  target: currentCards.title,
+  draggedCards: draggingCard.array,
+  reversed,
+};
+```
+
+Jeżeli karta zostanie odłożona poprawnie zostanie wywołany efekt dźwiękowy `cardSound(cardRight);` w przeciwnym przypadku, kiedy nie można odłożyć karty w dane miejsce, wraca ona na swoją pozycje.
+
+```js
+carriedTarget.style.opacity = 1;
+    let sibling = carriedTarget.nextElementSibling;
+    while (sibling !== null) {
+      sibling.style.opacity = 1;
+      sibling = sibling.nextElementSibling;
+```
