@@ -22,25 +22,25 @@ Zwraca komponent w momencie przegranej, który jest animacją deszczu.
 
 # drop.js
 
-Funkcja `drop.js` obsługuje możliwość odkładania kart na wybrany stos. 
+Funkcja `drop.js` obsługuje możliwość odkładania kart na wybrane miejsce. 
 
 Przyjmuje parametry:
 - accept - określa typ elementu na który obiekt może być upuszony.
-- onDrop - 
-- top - 
+- onDrop - przenosi obiekty z jednego miejsca na inne wybrane miejsce.
+- top - jest to punkt startowy stosu z którego została pobrana karta. 
 - currentArr - tablica, z której pobrany zostaje obiekt do odłożenia.
 - draggingArr - tablica obiektów, które zostają przenesone na miejsce docelowe.
 - name - zawiera nazwę obiektu na który obiekt jest odkładany.
 - isDragActive - sprawdza czy obiekt jest możliwy do przesunięcia, jeżeli jest zwraca `activeStyles`, jeżeli nie zwraca `style`.
 
-`activeStyles` - obiekt zawierający wartości top i zIndex
+`activeStyles` - obiekt zawierający wartości top i zIndex:
 ```js
 const activeStyles = {
     top: top + "%",
     zIndex: "100",
 };
 ```
-`style` - obiekt zawierający wartość top
+`style` - obiekt zawierający wartość top:
 ```js
 const style = {
     top: top + "%",
@@ -57,3 +57,12 @@ Funkcja zwraca `div` z ustlonymi wartościami:
     style={isDragActive ? activeStyles : style}
 ></div>
 ```
+
+# FinalColumnItem.js
+
+Funkcja zwraca wszystkie informacje o karcie na szczycie stosu zwycięstwa w zformatowanym `div`.
+
+# FinalColumns.js
+
+
+# MainColumns.js
