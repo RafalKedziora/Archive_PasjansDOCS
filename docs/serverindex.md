@@ -57,7 +57,6 @@ app.use(function (req, res, next) {
 });
 ```
 
-Przy połączeniu socket umożliwia korzystanie z kilku funkcjonalności. Po poprawnym podłączeniu wywoływane jest `console.log("a user connected");`.
 Wysyłanie informacji do clienta o wszystkich graczach, którzy nie są w grze:
 
 ```js
