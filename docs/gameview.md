@@ -64,5 +64,19 @@ Funkcja zwraca wszystkie informacje o karcie na szczycie stosu zwycięstwa w zfo
 
 # FinalColumns.js
 
+Zawiera informacje o stanie stosów zwycięstwa
+
+Przyjmuje parametry:
+- finalColumns - 
+- columns - 
+- draggingCard - 
+- setHistory - 
+- history - 
+- setDraggingCard - 
+- setMoveNumbers - 
+- setPoints - 
+- handleDrop - 
 
 # MainColumns.js
+
+

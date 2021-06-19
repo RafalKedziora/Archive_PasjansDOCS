@@ -27,6 +27,8 @@
 
 - data_objects
 
+- - [GameBoard](game_board.md)
+
 - SERVER
 
 - api
