@@ -27,6 +27,8 @@
 - - [Multiplayer](multiplayer.md)
 - - [GlobalStats](GlobalStats.md)
 - - [Logic](Logic.md)
+- - [PasswordReset](passwordreset.md)
+- - [Settings](settings.md)
 
 - data_objects
 

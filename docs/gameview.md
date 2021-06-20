@@ -274,7 +274,7 @@ Funkcja zwraca `div` z ustlonymi wartościami:
 
 # FinalColumnItem.js
 
-Funkcja zwraca wszystkie informacje o karcie na szczycie stosu zwycięstwa w zformatowanym `div`.
+Funkcja zwraca wszystkie informacje o karcie na szczycie stosu zwycięstwa w sformatowanym `div`.
 
 # FinalColumns.js
 

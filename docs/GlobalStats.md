@@ -1,7 +1,7 @@
 # Stats.js
 
-Funkcja zwraca `div` w którym przestawione są statystyki wszyskich zarejestrowanych kont w formie tabeli. Umożliwia także sortowanie kont po nazwie, rankingu, wygranych, remisach oraz przegranych. Sortować można zarówno rosnąco jak i malejąco.
+Funkcja zwraca `div` w którym przedstawione są statystyki wszystkich zarejestrowanych kont. Używa do tego celu funkcji `Posts`.  Umożliwia także sortowanie kont po nazwie, rankingu, wygranych, remisach oraz przegranych. Sortować można zarówno rosnąco jak i malejąco.
 
 # Posts.js
 
-F
+Funkcja zwraca sformatowaną tabelę zawierającą wszystkie statystyki pojedynczego gracza.
