@@ -10,8 +10,6 @@ Muzyka i dźwięki częściowo są przypisane do motywów. Dźwięki lub muzyka,
 
 `Music_Synthwave_Klondike.mp3` - Ścieżka dźwiękowa do rozgrywki w normalnym motywie.
 
-`Music_Menu_Klondike.mp3` - Ścieżka dźwiękowa w menu.
-
 ## SoundDesign
 
 Dźwięki kart, przycisków, wygranej, przegranej itp.
