@@ -2,6 +2,7 @@
 
 - [Start](/)
 - [Opis](opis.md "Opis gry Klondike")
+- [Specyfikacja projektu](specification.md)
 - [Instrukcja obsługi aplikacji](instrukcjaklient.md)
 - [Instrukcja obsługi dla użytkownika](instrukcjauzytkownika.md)
 - [Konfiguracja bazy danych](mysql.md)
