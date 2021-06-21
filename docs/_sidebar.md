@@ -19,6 +19,7 @@
 - - [App.js](clientapp.md)
 
 - src/components
+- - [Account](Account.md)
 - - [AppInfo](appinfo.md)
 - - [authors](authors.md)
 - - [Card Motives](cardmotives.md)
