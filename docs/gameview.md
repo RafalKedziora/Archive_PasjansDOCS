@@ -278,19 +278,28 @@ Funkcja zwraca wszystkie informacje o karcie na szczycie stosu zwycięstwa w sfo
 
 # FinalColumns.js
 
-Zawiera informacje o stanie stosów zwycięstwa
+Zawiera informacje o stanie stosów zwycięstwa, zapisuje historię rozgrywki oraz obsługuje przenoszenie kart na stosy zwycięstwa.
 
 Przyjmuje parametry:
-- finalColumns - 
-- columns - 
-- draggingCard - 
-- setHistory - 
-- history - 
-- setDraggingCard - 
-- setMoveNumbers - 
-- setPoints - 
-- handleDrop - 
+- finalColumns - stosy reprezentujące pola zwycięstwa.
+- columns - zawiera informacje o kartach ułożonych na stosach do gry.
+- draggingCard - zawiera stos kart, które są przenoszone przez gracza.
+- setHistory - zmienna potrzebna do ustalania historii rozgrywki.
+- history - historia rozgrywki.
+- setDraggingCard - funkcja, która służy do ustalania przenoszonego stosu kart. 
+- setMoveNumbers - ustawia liczbę wykonanych ruchów.
+- setPoints - ustawia liczbę punktów.
+- handleDrop - parametry wykorzystywane w funkcji `Drop`.
+- effect - ustawienie poziomu głośności.
+- revealCardRef - referencja do odkrywania kart.
 
 # MainColumns.js
 
+Zawiera informacje o stanie stosów do gry oraz obsługuje przenoszenie kart pomiędzy stosami do gry.
 
+Przyjmuje parametry:
+- mainColumns - zawiera informacje o stosach reprezentujących pola do gry.
+- setDraggingCard - zestaw parametrów przekazywany do funkcji `DraggableCard`.
+- handleDrop - parametry wykorzystywane w funkcji `Drop`.
+- draggingCard - zawiera stos kart, które są przenoszone przez gracza.
+- effect - ustawienie poziomu głośności.

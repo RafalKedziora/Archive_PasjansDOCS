@@ -7,8 +7,6 @@ Funkcja `Settings` daje możliwość:
 - ustawienia poziomu głośności muzyki,
 - ustawienia poziomu głośności efektów.
 
-Ustawienia można ustawiać zarówno z poziomu gościa, jak i zalogowanego użytkownika. Ustawienia dla gości zapamiętywane są tylko na czas trwania sesji. Dla zalogowanych użytkowników ustawienia są zapamiętywane.
-
 Motywy kart możliwe do wybrania:
 ```js
   const motives = ["cyberpunk", "default"];
@@ -17,3 +15,5 @@ Motywy kart możliwe do wybrania:
 Motywy kart można zmieniać za pomocą przycisków, pokazują się one takze na podglądzie. Wybrany motyw trzeba zatwierdzić przyciskiem "Wybierz".
 
 Ustawienie poziomu głośności muzyki oraz efektów odbywa się za pomocą dwóch osobnych sliderów. Obok sliderów pokazana jest wartość głośności jako procent maksymalnej głośności.
+
+Ustawienia można ustawiać zarówno z poziomu gościa, jak i zalogowanego użytkownika. Ustawienia dla gości zapamiętywane są tylko na czas trwania sesji. Dla zalogowanych użytkowników ustawienia są zapamiętywane.
